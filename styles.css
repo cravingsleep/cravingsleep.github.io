@@ -1,0 +1,32 @@
+:root {
+    --primary-color: #FE642E;
+}
+
+html, body {
+    font-family: Verdana, 'Times New Roman', Times, serif;
+}
+
+html, body, h1, h3, h4 {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    top: 0px;
+    background-color: var(--primary-color);
+    padding: 5px;
+}
+
+.content {
+    display: flex;
+    justify-content: space-around;
+}
+
+.infobox {
+    /* border: 2px solid rgb(156, 154, 154); */
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgb(224, 216, 216);
+    box-shadow: 2px 3px grey;
+}
