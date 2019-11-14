@@ -1,32 +1,83 @@
-:root {
-    --primary-color: #FE642E;
+:root { 
+    --title-color: rgba(15, 177, 218, 0.863);
+    --subtitle-color: rgb(241, 123, 123);
+    --background-color: rgb(235, 235, 235);
+    --review-color: rgb(221, 218, 218);
+    --review-shadow-color: rgb(209, 205, 205);
+
+    --grid-gap: 15px;
+    --review-padding: 15px;
 }
 
-html, body {
-    font-family: Verdana, 'Times New Roman', Times, serif;
-}
-
-html, body, h1, h3, h4 {
+body {
     margin: 0;
     padding: 0;
+    background-color: var(--background-color);
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
 
-.header {
-    top: 0px;
-    background-color: var(--primary-color);
-    padding: 5px;
+p {
+    margin: 0;
 }
 
-.content {
+.container {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    max-width: 720px;
+}
+
+.container h2 {
+    color: var(--title-color);
+    border-bottom: 1px solid var(--review-shadow-color);
+    padding-bottom: 6px;
+}
+
+.reviews {
+    display: grid;
+    column-gap: var(--grid-gap);
+    row-gap: var(--grid-gap);
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.reviews h3 {
+    margin-bottom: 2px;
+    color: var(--subtitle-color);
+    margin-top: var(--review-padding);
+}
+
+.reviews article {
+    background-color: var(--review-color);
+    border-radius: 3px;
+    border-bottom: 5px solid var(--review-shadow-color);
+    border-right: 5px solid var(--review-shadow-color);
+
+}
+
+.reviews .description {
+    margin-top: 2px;
+    padding: 10px;
+}
+
+.ratings {
     display: flex;
     justify-content: space-around;
+    margin-bottom: var(--review-padding);
 }
 
-.infobox {
-    /* border: 2px solid rgb(156, 154, 154); */
-    margin: 10px;
-    padding: 10px;
-    border-radius: 5px;
-    background-color: rgb(224, 216, 216);
-    box-shadow: 2px 3px grey;
+@keyframes spin {
+    from {
+        transform: rotateZ(0deg);
+        opacity: 0;
+    }
+
+    to {
+        transform: rotateZ(360deg);
+        opacity: 1;
+    }
+}
+
+.ratings span {
+    animation: spin 1.25s linear 0.25s;
+    transform-origin: 50% 50%;
 }
