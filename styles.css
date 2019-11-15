@@ -62,12 +62,12 @@ p {
 
 }
 
-.reviews .description {
+.reviews p {
     margin-top: 2px;
     padding: 10px;
 }
 
-.ratings {
+.reviews div {
     display: flex;
     justify-content: space-around;
     margin-bottom: var(--review-padding);
@@ -85,7 +85,7 @@ p {
     }
 }
 
-.ratings span {
+.reviews div span {
     animation: spin 1.25s linear 0.25s;
     transform-origin: 50% 50%;
     animation-fill-mode: forwards;
