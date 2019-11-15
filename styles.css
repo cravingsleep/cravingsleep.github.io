@@ -19,6 +19,7 @@ body {
 
 p {
     margin: 0;
+    font-size: 0.85em;
 }
 
 .container {
@@ -102,7 +103,11 @@ section div {
     }
 }
 
-section div span {
+.conclusion {
+    font-size: 0.5em;
+}
+
+section .rating span {
     animation: spin 1.25s linear 0.25s;
     transform-origin: 50% 50%;
     animation-fill-mode: forwards;
