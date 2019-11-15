@@ -50,15 +50,17 @@ p {
     }
 }
 
-.reviews {
+section {
     display: grid;
     column-gap: var(--grid-gap);
     row-gap: var(--grid-gap);
     grid-template-columns: repeat(auto-fit, minmax(var(--content-box-size), 1fr));
+
+    margin-bottom: var(--grid-gap);
 }
 
 @media (max-width: 420px) {
-    .reviews {
+    section {
         grid-template-columns: 1fr;
     }
 }
@@ -82,7 +84,7 @@ section p {
     padding: 10px;
 }
 
-.reviews div {
+section div {
     display: flex;
     justify-content: space-around;
     margin-bottom: var(--review-padding);
@@ -100,9 +102,14 @@ section p {
     }
 }
 
-.reviews div span {
+section div span {
     animation: spin 1.25s linear 0.25s;
     transform-origin: 50% 50%;
     animation-fill-mode: forwards;
     opacity: 0;
+}
+
+footer {
+    margin-bottom: var(--grid-gap);
+    color: var(--title-color);
 }
